@@ -1,0 +1,50 @@
+// SETUP
+scaffold project -- directory structure
+
+install dependencies -- see package.json
+
+create .gitignore
+
+// CONTROLLER
+server.js
+  create express server
+  require path
+  other boilerplate
+
+.env
+  create environment variables to connect to db
+  add .env to .gitignore!
+
+set up for use of sessions
+  
+// MODEL
+
+database setup
+db/schema.sql 
+  destroy/create database only...Sequelize will create tables
+  from mysql CLI run <source db/schema.sql> to create db, confirm db creation with <show databases;>, then <quit;>
+
+config/connection.js
+  create connection to db with sequelize
+  verify reciprocal code in server.js that brings in connection
+
+create Schema models
+
+model/index.js  
+  create associations
+  synchronize models in server.js
+
+create routes/controllers
+
+  api routes -- 
+      User (first usually if other end-user behavior is dependant on User...for example an end-user can only make a post if they are a registered and logged-in (U)ser so Post is dependant on User)
+
+  view routes -- home-routes (& dashboard-routes)
+
+
+// VIEW
+templates
+  --views
+    --layouts
+    --partials
+    .handlebar files
